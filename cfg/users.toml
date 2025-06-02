@@ -1,0 +1,29 @@
+[system]
+home = "/"
+# Read/Write Device All
+perms = [ "RW_DA" ]
+canraise = "no
+
+[installer]
+home = "/"
+# Read/Write Device All
+perms = [ "RW_DA" ]
+canraise = "no"
+
+[root]
+home = "/usr/root"
+# Read/Write Device Operating System
+perms = [ "RW_DO" ]
+canraise = "no"
+
+[user]
+home = "/usr/user"
+# Read/Write Device Home (Can raise perms up to RW_DO)
+perms = [ "RW_DH", "R_DA"]
+canraise = "RW_DO"
+
+[guest]
+home = "/usr/guest"
+# Only Read/Write Home
+perms = [ "RW_DH" ]
+canraise = "no"

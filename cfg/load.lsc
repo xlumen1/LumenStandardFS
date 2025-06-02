@@ -1,0 +1,17 @@
+; Variables
+SET SYSTEM="system"
+SET ROOT="root"
+SET MAIN="user"
+SET INSTALL="installer"
+
+; Initalize and start running users
+USERINIT $SYSTEM
+USERINIT $ROOT
+USERINIT $INSTALL
+USERINIT $MAIN
+
+; Set the screenuser to main user
+SETSCREENUSER $MAIN
+
+; Run installer as installer, pipe io to main user
+IOPIPE (RUNAS $INSTALL /.installer) USERSID $MAIN
