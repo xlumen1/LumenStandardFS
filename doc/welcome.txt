@@ -1,0 +1,11 @@
+Welcome to LumenOS!
+
+This has for the most part been a solo project, and almost everything is custom built, including but not limited to:
+ - Graphics
+ - Filesystem
+ - Build system
+ - Graphics drivers
+ - Keyboard drivers
+ - Etc.
+
+You can check out the docs program for more information of usage specifics.
