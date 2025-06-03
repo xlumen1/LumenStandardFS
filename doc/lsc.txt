@@ -44,4 +44,4 @@ DELETE <path> ; Delete a file
 
 Anything in parenthesis will be run first.
 When executed, a command will be replaced with it's return value.
-Comments are denoted with a semicolon
+Comments are denoted with a semicolon.
