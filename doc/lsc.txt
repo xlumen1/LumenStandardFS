@@ -1,0 +1,7 @@
+LSC (or LumenOS System Control) is a system for controlling privileged actions in LumenOS.
+The most common form of LSC is script LSC, such as the system scripts in /lsc. Although it is possible to directly send LSC to the os via the lsc command.
+
+Common instructions:
+
+SET <name>=<value> ; set the value of a macro, accessed with $NAME
+IOPIPE <proc_id> <session_id>
