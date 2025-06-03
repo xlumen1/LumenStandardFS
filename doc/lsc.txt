@@ -3,5 +3,45 @@ The most common form of LSC is script LSC, such as the system scripts in /lsc. A
 
 Common instructions:
 
-SET <name>=<value> ; set the value of a macro, accessed with $NAME
-IOPIPE <proc_id> <session_id>
+; Variables
+
+SET <name>=<value> ; Set the value of a macro, accessed with $NAME
+ENVSET <envvar_name>=<value> ; Set an environment variable
+ENVREG <envar_name> ; Register a new environment variable
+ENVDEL <envar_name> ; Delete an environment variable
+
+; Environment
+
+PUSH <id> ; Create and save a script that restores the pc to it's current environment state
+POP <id> ; Run and delete a pushed environment script
+RET <id> ; Run a pushed environment script without deleting
+RAMDISK <id> ; Save current ram state to disk
+RETRAMDISK <id> ; Load ram state from disk
+
+; User
+
+USERINIT <user> ; Initalize and log in to user
+SETSCREENUSER <user> ; Set the current display session to an initalized user
+USERSID <user> ; Get the session id of a user (Returns Session Id Number)
+
+; Program
+
+RUNAS <user> <program> ; Run a program as an initalized user (Returns Program Id Number)
+IOPIPE <proc_id> <session_id> ; Pipe io of program to session
+STOP <proc_id> ; Stop a program
+
+; File
+
+BLOCK <file_id> ; Block reading and writing of file
+UNBLOCK <file_id> ; Unblock reading and writing of file
+FILEID <path> ; Get the pointer of a file if open (Returns file id)
+OPEN <path> ; Open a file (Returns file id)
+CLOSE <file_id> ; Close a file
+CREATE <path> ; Create a file
+DELETE <path> ; Delete a file
+
+; Syntax
+
+Anything in parenthesis will be run first.
+When executed, a command will be replaced with it's return value.
+Comments are denoted with a semicolon
