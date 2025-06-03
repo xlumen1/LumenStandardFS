@@ -14,4 +14,4 @@ USERINIT $MAIN
 SETSCREENUSER $MAIN
 
 ; Run installer as installer, pipe io to main user
-IOPIPE (RUNAS $INSTALL /.installer) USERSID $MAIN
+IOPIPE (RUNAS $INSTALL /.installer) (USERSID $MAIN)

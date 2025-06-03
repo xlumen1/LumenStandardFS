@@ -1,0 +1,10 @@
+; Variables
+SET CURRENT_USER=$SCUSR
+SET TARGET_USER=$0
+
+; Disinit original user, init target user
+USERDISINIT $CURRENT_USER
+USERINIT $TARGET_USER
+
+; Set screen user
+SETSCREENUSER $TARGET_USER
